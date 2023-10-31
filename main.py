@@ -88,10 +88,3 @@ dates = {
 	"auth_action": "send_code_sms",
 	"PHONE": f"{phone}"
 }
-
-response = requests.post('https://i-store.by/api/apr/temporary-register', json={"login":f"{phone}","uaewbfjswrswexpdkrgj":"jpjgolyqqfamoipphtcw","fingerprint":"e05d741905b4e28c6fcd4ceeff28a29cf3feb90ff99156c6acc08ba742660be2","slug":"?gad=1&gclid=Cj0KCQjwy4KqBhD0ARIsAEbCt6heNVLKTXHLV8sUsaf-ShowlCWEQJ6nqEbIvyqwjKXCbaE1h97C7vMaAgsZEALw_wcB"}, headers=headers1)
-
-if response.status_code == 200:
-    print('Смс от i-store отправлено!')
-else:
-    print('Смс от i-store не отправлено!')
