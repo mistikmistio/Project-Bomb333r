@@ -1,10 +1,10 @@
-import os, sys
-import fake_useragent
+#import os, sys
+#import fake_useragent
 import requests
-import time
+#import time
 
-user = fake_useragent.UserAgent()
-headers1 = {'user_agent': user.random}
+user = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0'
+headers1 = {'user_agent': user}
 print('Введите номер в формате: +375*********')
 phone = input()
 
