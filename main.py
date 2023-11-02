@@ -252,9 +252,9 @@ dates = {
 
 response = requests.post('https://xn----7sblod1blc5h.xn--90ais/user/#registration', data=dates, headers=headers1)
 if response.status_code == 200:
-    print(Fore.GREEN + "Смс от detmir отправлено!")
+    print(Fore.GREEN + "Смс от dari-rozy отправлено!")
 else:
-    print(Fore.RED + "Смс от detmir не отправлено!")
+    print(Fore.RED + "Смс от dari-rozy не отправлено!")
 
 
 response = requests.post('https://users-service.atlantm.by/api/auth/login', json={"phone":f"{phone}"}, headers=headers1)
