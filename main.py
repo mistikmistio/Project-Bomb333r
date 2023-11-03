@@ -345,10 +345,3 @@ if response.status_code == 200:
     print(Fore.GREEN + "Смс от e-zoo.by отправлено!")
 else:
     print(Fore.RED + "Смс от e-zoo.by не отправлено!")
-
-
-user = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
-headers1 = {
-    "user-agent": user,
-    "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQ1MjMxNzgzLCJzZXNzaW9uSWQiOiI5NDRjNjBlNS00MGVkLTQ0YzgtYWE2Yi0yZjZmOGM3NzVhMjYiLCJjcmVhdGVkIjoiMjAyMy0xMS0wM1QxMTo0NDo0MS43MDQ1MThaIiwicGxhdGZvcm0iOiJicm93c2VyIiwidG9rZW5UeXBlIjoiQUNDRVNTIn0.K8lT1mKYDocAR1ozF8PkVtdINOmDfp95L3L44SQ6tzxE9izIo7aIDAFVClmo_pAi_zg5THYVCPHfq2Dpk05OF_ptBT9xsOLFaFjKJXKb-_syrRNFyDUnFw55d1Xq7GQC8oan_LkpRbg8Gb1zyOK9df3xyRFol0Pv1OfwdUzdCkfQZFWejd1dp7BDoE7g9msrUM3DVkRlLjrvWAqTYfoazmjX9ILyYn5iMrgj_7hYBQ58jV4w-NnDtedglSasPQwbAGBn_21UTf1712D8MTowy5dZrZ4lmyY-SsRgme75DK8xI9AT0CzMQB1sF96-FWpc_NilIimt5JSQbZbjSu1nuu8HL9oMSWSYjQG3VE7yb81pmRnkCgXH8AdGYZGmQnYRRyALRNLmXoqB4qgd2FZ_BTriryRXzDVnSgWpKadPakeIlxRK2aDwLz9KRectUKUfBlA6ER6BQpBAIYviEiCewHnmY8lGj4O3QpnmEo88edgkLZ6HSZhZrtsKwLWzXhBKUdcjvGmS2MumHvrVOj8TEINJVHB6Dwj_jOLZCjPAV_iOj5_HlobcyN2mHCRb7tslXEpvrhtK90y-0IfNvjEPDpStS0F8AGeu_ZB0I6oHyYPJ4z6fucMuNk4miBcxMG4gYbGIjMCzPxA-rZHDAPbRs48JluNY-1nJrm4"
-}
