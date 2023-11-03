@@ -336,7 +336,7 @@ headers1 = {
 }
 
 dates = {
-    "phone": "+375259470882",
+    "phone": f"{phone}",
     "isResend": "true"
 }
 
